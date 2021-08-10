@@ -47,3 +47,17 @@ body{
     background-color: #f4f4f4da;
     border-radius: 2px;
 }
+
+.divider{
+    height: 0.1px;
+    background-color: black;
+}
+.tableCard-content{
+    display: grid;
+    grid-template-columns: repeat(5,3fr);
+    grid-column-gap: 50px;
+}
+
+.tableCard-content span{
+    margin-right: 20px;
+}
