@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Avatar from '@material-ui/core/Avatar';
+import {Link} from "react-router-dom";
 
 const TableCard = ({ item }) => {
     const [statusColor, setStatusColor] = useState('');
@@ -12,9 +13,9 @@ const TableCard = ({ item }) => {
             setStatusColor('rgb(255, 231, 10)')
         }
     }, [])
-    var link= `https://breaking-bad-webapp.netlify.app/${item.name}`
+    var link= `${item.name}`
     return (
-        <a href={link}>
+        <Link to={link}>
             <div className="tableCard">
                 <div className="tableCard-body">
                     <div className="tableCard-content">
@@ -25,7 +26,7 @@ const TableCard = ({ item }) => {
                     </div>
                 </div>
             </div>
-        </a>
+        </Link>
     )
 }
 
