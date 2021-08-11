@@ -19,9 +19,9 @@ const TableCard = ({ item }) => {
                 <div className="tableCard-body">
                     <div className="tableCard-content">
                         <div className="name"><span>{item.char_id}.</span><Avatar className="image" src={item.img} />{item.name}</div>
-                        <p>{item.occupation}</p>
-                        <p>{item.birthday}</p>
-                        <p style={{ color: `${statusColor}` }}>{item.status}</p>
+                        <p><span className="mobileOnly">Occupation</span>{item.occupation}</p>
+                        <p><span className="mobileOnly">Birthday</span>{item.birthday}</p>
+                        <p style={{ color: `${statusColor}` }}><span className="mobileOnly">Status</span>{item.status}</p>
                     </div>
                 </div>
             </div>

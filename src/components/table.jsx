@@ -13,12 +13,16 @@ const Table = ({ items, isLoading }) => {
         setPagination({ start: start, end: end })
     };
     return isLoading ? (
+        //spinner
         <div className="spinner">
-            <div className="loader"/>
+            <div className="loader" />
         </div>
     ) : (
         <div>
+            {/* list card */}
             <div className="cardBackground">
+
+                {/* table title */}
                 <div className="tableCard-heading">
                     <div className="tableCard-body">
                         <div className="tableCard-content">
@@ -29,6 +33,8 @@ const Table = ({ items, isLoading }) => {
                         </div>
                     </div>
                 </div>
+
+                {/* table list mapped from items from the api */}
                 {items.slice(pagination.start, pagination.end).map(item => (
                     <TableCard
                         key={item.char_id}
@@ -37,6 +43,8 @@ const Table = ({ items, isLoading }) => {
                 ))}
 
             </div>
+
+            {/* paginator which allows pagination */}
             <Paginator total={items.length} showPerPage={showPerPage} onPaginationChange={onPaginationChange} />
         </div>
 
