@@ -12,9 +12,9 @@ const TableCard = ({ item }) => {
             setStatusColor('rgb(255, 231, 10)')
         }
     }, [])
-    var name= item.name
+    var link= `https://breaking-bad-webapp.netlify.app/${item.name}`
     return (
-        <a href={name}>
+        <a href={link}>
             <div className="tableCard">
                 <div className="tableCard-body">
                     <div className="tableCard-content">
